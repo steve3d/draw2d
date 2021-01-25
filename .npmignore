@@ -5,6 +5,8 @@
 .nvmrc
 .idea
 .editorconfig
+jsconfig.json
+draw2d.code-workspace
 package-lock.json
 webpack.config.js
 yarn.lock

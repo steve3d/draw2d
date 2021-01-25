@@ -1,5 +1,5 @@
 {
-  "name": "draw2d",
+  "name": "@vrdd/draw2d",
   "version": "1.0.38",
   "description": "JS drag&drop lib",
   "main": "dist/draw2d.js",
@@ -9,7 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/freegroup/draw2d.git"
+    "url": "https://github.com/steve3d/draw2d.git"
+  },
+  "publishConfig": {
+    "registry": "http://docs.chinavfx.net:4873",
+    "tag": "latest"
   },
   "keywords": [
     "draw2d",
