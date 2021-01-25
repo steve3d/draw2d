@@ -673,8 +673,8 @@ draw2d.Canvas = Class.extend(
      * @returns {draw2d.geo.Point} The coordinate in relation to the canvas [0,0] position
      */
     fromDocumentToCanvasCoordinate: function (x, y) {
-      var rect = this.paper.canvas.getBoundingClientRect()
-      return new _packages2.default.geo.Point((x - rect.left) * this.zoomFactor, (y - rect.top) * this.zoomFactor)
+        var rect = this.paper.canvas.getBoundingClientRect();
+        return new draw2d.geo.Point((x - rect.left) * this.zoomFactor, (y - rect.top) * this.zoomFactor);
     },
 
     /**
@@ -687,8 +687,8 @@ draw2d.Canvas = Class.extend(
      * @returns {draw2d.geo.Point} the coordinate in relation to the document [0,0] position
      */
     fromCanvasToDocumentCoordinate: function (x, y) {
-      var rect = this.paper.canvas.getBoundingClientRect()
-      return new _packages2.default.geo.Point(x * (1 / this.zoomFactor) + rect.left, y * (1 / this.zoomFactor) + rect.top)
+        var rect = this.paper.canvas.getBoundingClientRect();
+        return new draw2d.geo.Point(x * (1 / this.zoomFactor) + rect.left, y * (1 / this.zoomFactor) + rect.top);
     },
 
     /**

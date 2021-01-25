@@ -5,7 +5,7 @@ const pkg = require('./package.json');
 
 
 
-let libraryName = pkg.name;
+let libraryName = 'draw2d';
 
 let plugins = [], outputFile;
 
