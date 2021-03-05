@@ -46,43 +46,43 @@ draw2d.Canvas = Class.extend(
       // This can be done by a palette of toolbar or something else.
       // For more information see : http://jqueryui.com/demos/droppable/
       //
-      $(this.html).droppable({
-        accept: '.draw2d_droppable',
-        over: function (event, ui) {
-          _this.onDragEnter(ui.draggable)
-        },
-        out: function (event, ui) {
-          _this.onDragLeave(ui.draggable)
-        },
-        drop: function drop(event, ui) {
-          event = _this._getEvent(event);
-          let helperPos = $(ui.helper).position()
-          let pos = _this.fromDocumentToCanvasCoordinate(event.clientX, event.clientY);
-          _this.onDrop(ui.draggable,
-            pos.getX()- (event.clientX-helperPos.left)+5,
-            pos.getY()- (event.clientY-helperPos.top)+5, event.shiftKey, event.ctrlKey);
-        }
-      })
+      // $(this.html).droppable({
+      //   accept: '.draw2d_droppable',
+      //   over: function (event, ui) {
+      //     _this.onDragEnter(ui.draggable)
+      //   },
+      //   out: function (event, ui) {
+      //     _this.onDragLeave(ui.draggable)
+      //   },
+      //   drop: function drop(event, ui) {
+      //     event = _this._getEvent(event);
+      //     let helperPos = $(ui.helper).position()
+      //     let pos = _this.fromDocumentToCanvasCoordinate(event.clientX, event.clientY);
+      //     _this.onDrop(ui.draggable,
+      //       pos.getX()- (event.clientX-helperPos.left)+5,
+      //       pos.getY()- (event.clientY-helperPos.top)+5, event.shiftKey, event.ctrlKey);
+      //   }
+      // })
 
 
       // Create the jQuery-Draggable for the palette -> canvas drag&drop interaction
       //
-      $(".draw2d_droppable").draggable({
-        appendTo: "body",
-        stack: "body",
-        zIndex: 27000,
-        helper: "clone",
-        drag: function (event, ui) {
-          event = _this._getEvent(event)
-          let pos = _this.fromDocumentToCanvasCoordinate(event.clientX, event.clientY)
-          _this.onDrag(ui.draggable, pos.getX(), pos.getY(), event.shiftKey, event.ctrlKey)
-        },
-        stop: function (e, ui) {
-        },
-        start: function (e, ui) {
-          $(ui.helper).addClass("shadow")
-        }
-      })
+      // $(".draw2d_droppable").draggable({
+      //   appendTo: "body",
+      //   stack: "body",
+      //   zIndex: 27000,
+      //   helper: "clone",
+      //   drag: function (event, ui) {
+      //     event = _this._getEvent(event)
+      //     let pos = _this.fromDocumentToCanvasCoordinate(event.clientX, event.clientY)
+      //     _this.onDrag(ui.draggable, pos.getX(), pos.getY(), event.shiftKey, event.ctrlKey)
+      //   },
+      //   stop: function (e, ui) {
+      //   },
+      //   start: function (e, ui) {
+      //     $(ui.helper).addClass("shadow")
+      //   }
+      // })
 
 
       // painting stuff
